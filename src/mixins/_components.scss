@@ -1,0 +1,12 @@
+@mixin flexBox($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  width: 100%;
+}
+
+@mixin placeCenter {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
