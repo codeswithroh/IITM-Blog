@@ -1,0 +1,38 @@
+@import "../../../mixins/components";
+@import "../../../mixins/fonts";
+@import "../../../mixins/padding";
+@import "../../../mixins/margins";
+@import "../../../mixins/colors";
+
+.HeroSection {
+  width: 100%;
+  &__container {
+    @include flexBox(center, space-around, 0);
+  }
+
+  &__body {
+    &__heading {
+      h1 {
+        font-size: $heading-font-size;
+        line-height: 1.3em;
+        margin-bottom: $primary-margin;
+        font-weight: bold;
+      }
+    }
+
+    &__sub__heading {
+      max-width: 20em;
+      margin-bottom: $secondary-margin;
+
+      p {
+        line-height: 1.8em;
+      }
+    }
+
+    &__button {
+      button {
+        @include button($primary-button-color, white);
+      }
+    }
+  }
+}

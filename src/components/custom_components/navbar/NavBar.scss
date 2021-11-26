@@ -1,0 +1,28 @@
+@import "../../../mixins/components";
+@import "../../../mixins/padding";
+
+$text-color: #5c5c5c;
+
+.NavBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: $text-color;
+
+  &__container {
+    @include flexBox(center, space-between, 0em);
+    padding: $primary-padding;
+  }
+
+  &__items {
+    @include flexBox(center, flex-end, 2em);
+  }
+
+  &__item {
+    &--link {
+      text-decoration: none;
+      color: $text-color;
+    }
+  }
+}

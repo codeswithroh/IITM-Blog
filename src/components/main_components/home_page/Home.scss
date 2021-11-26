@@ -1,1 +1,7 @@
 @import "../../../mixins/components";
+@import "../../../mixins/colors";
+
+.Home {
+  @include placeCenter;
+  background-color: $primary-background-color;
+}
