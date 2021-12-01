@@ -12,7 +12,7 @@ function HeroSection() {
         <div className="HeroSection__body">
           <div className="HeroSection__body__heading">
             <h1>
-              <div>We Share</div>
+              <div className="HeroSection__body__heading__top">We Share</div>
               <div>Knowledge</div>
             </h1>
           </div>
@@ -26,6 +26,10 @@ function HeroSection() {
             <button>Start A Blog</button>
           </div>
         </div>
+      </div>
+      <div className="HeroSection--scroll">
+        <i className="fas fa-chevron-down fa-2x"></i>
+        <i className="fas fa-chevron-down fa-2x"></i>
       </div>
     </div>
   );

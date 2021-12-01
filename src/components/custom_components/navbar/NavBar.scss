@@ -11,12 +11,12 @@ $text-color: #5c5c5c;
   color: $text-color;
 
   &__container {
-    @include flexBox(center, space-between, 0em);
+    @include flexBox(center, space-between, 0em, row);
     padding: $primary-padding;
   }
 
   &__items {
-    @include flexBox(center, flex-end, 2em);
+    @include flexBox(center, flex-end, 2em, row);
   }
 
   &__item {

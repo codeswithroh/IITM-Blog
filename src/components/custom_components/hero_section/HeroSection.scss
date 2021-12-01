@@ -6,8 +6,17 @@
 
 .HeroSection {
   width: 100%;
+  @include flexBox(center, center, 2em, column);
+  margin-top: 5em;
+
+  &--scroll {
+    @include flexBox(center, center, 0em, column);
+    color: $primary-sub-text-color;
+    animation: scrollDown 1s linear infinite;
+  }
+
   &__container {
-    @include flexBox(center, space-around, 0);
+    @include flexBox(center, space-around, 0, row);
   }
 
   &__body {
@@ -18,21 +27,50 @@
         margin-bottom: $primary-margin;
         font-weight: bold;
       }
+
+      &__top {
+        color: $primary-text-color;
+      }
     }
 
     &__sub__heading {
-      max-width: 20em;
+      max-width: 22em;
       margin-bottom: $secondary-margin;
 
       p {
         line-height: 1.8em;
+        color: $primary-sub-text-color;
+        font-weight: bold;
       }
     }
 
     &__button {
       button {
-        @include button($primary-button-color, white);
+        @include button($primary-button-color, white, 1.6rem);
+      }
+
+      button:hover {
+        @include button--hover($primary-button-color, white);
       }
     }
+  }
+}
+
+// animations
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+  75% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(8px);
   }
 }
