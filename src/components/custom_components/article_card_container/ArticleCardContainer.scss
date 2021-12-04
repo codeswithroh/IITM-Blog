@@ -7,6 +7,20 @@
 .ArticleCardContainer {
   @include placeCenter;
 
+  &__container {
+    margin: 5em 2em;
+    @include flexBox(center, center, 5em, row);
+    flex-wrap: wrap;
+
+    &--right {
+      margin-left: auto;
+    }
+
+    &--left {
+      margin-right: auto;
+    }
+  }
+
   &__card {
     background: linear-gradient(
       142.41deg,

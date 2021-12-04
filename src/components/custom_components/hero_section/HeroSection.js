@@ -3,6 +3,13 @@ import Background from "../../../assets/svgs/girl.svg";
 import "./HeroSection.scss";
 
 function HeroSection() {
+  const scrollPage = () => {
+    window.scrollTo({
+      top: 500,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="HeroSection">
       <div className="HeroSection__container">
@@ -27,7 +34,7 @@ function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="HeroSection--scroll">
+      <div onClick={() => scrollPage()} className="HeroSection--scroll">
         <i className="fas fa-chevron-down fa-2x"></i>
         <i className="fas fa-chevron-down fa-2x"></i>
       </div>

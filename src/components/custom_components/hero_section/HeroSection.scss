@@ -12,6 +12,7 @@
   &--scroll {
     @include flexBox(center, center, 0em, column);
     color: $primary-sub-text-color;
+    cursor: pointer;
     animation: scrollDown 1s linear infinite;
   }
 
@@ -60,17 +61,22 @@
 @keyframes scrollDown {
   0% {
     transform: translateY(0px);
+    opacity: 1;
   }
   25% {
     transform: translateY(2px);
+    opacity: 0.75;
   }
   50% {
     transform: translateY(4px);
+    opacity: 0.5;
   }
   75% {
     transform: translateY(6px);
+    opacity: 0.25;
   }
   100% {
     transform: translateY(8px);
+    opacity: 0;
   }
 }
