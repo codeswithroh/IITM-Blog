@@ -18,6 +18,20 @@
 
   &__container {
     @include flexBox(center, space-around, 0, row);
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      gap: 2em;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    img {
+      @media screen and (max-width: 700px) {
+        max-width: 20em;
+      }
+    }
   }
 
   &__body {
@@ -27,6 +41,10 @@
         line-height: 1.3em;
         margin-bottom: $primary-margin;
         font-weight: bold;
+
+        @media screen and (max-width: 450px) {
+          font-size: $heading-mobile-font-size;
+        }
       }
 
       &__top {
@@ -38,16 +56,28 @@
       max-width: 22em;
       margin-bottom: $secondary-margin;
 
+      @media screen and (max-width: 700px) {
+        max-width: 25em;
+      }
+
       p {
         line-height: 1.8em;
         color: $primary-sub-text-color;
         font-weight: bold;
+
+        @media screen and (max-width: 450px) {
+          font-size: $sub-heading-mobile-font-size;
+        }
       }
     }
 
     &__button {
       button {
         @include button($primary-button-color, white, 1.6rem);
+
+        @media screen and (max-width: 450px) {
+          font-size: $sub-heading-mobile-font-size;
+        }
       }
 
       button:hover {

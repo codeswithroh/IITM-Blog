@@ -9,13 +9,14 @@ function ArticleCardContainer() {
       <div className="ArticleCardContainer">
         <h1 className="mt-5">Recommended Articles</h1>
         <div className="ArticleCardContainer__container">
-          {demo.map((d, index) => {
-            if (index % 2 === 0) {
-              return (
-                <div className="ArticleCardContainer__container--right">
+          <div className="ArticleCardContainer__container--right">
+            {/* eslint-disable-next-line */}
+            {demo.map((d, index) => {
+              if (index % 2 === 0) {
+                return (
                   <Card key={index} className="ArticleCardContainer__card mb-4">
                     <CardBody>
-                      <div>
+                      <div className="ArticleCardContainer__image">
                         <img src={"https://picsum.photos/300/200"} alt="..." />
                       </div>
                       <CardTitle
@@ -33,14 +34,18 @@ function ArticleCardContainer() {
                       </Button>
                     </CardBody>
                   </Card>
-                </div>
-              );
-            } else {
-              return (
-                <div className="ArticleCardContainer__container--left">
+                );
+              }
+            })}
+          </div>
+          <div className="ArticleCardContainer__container--left">
+            {/* eslint-disable-next-line */}
+            {demo.map((d, index) => {
+              if (index % 2 !== 0) {
+                return (
                   <Card key={index} className="ArticleCardContainer__card mb-4">
                     <CardBody>
-                      <div>
+                      <div className="ArticleCardContainer__image">
                         <img src={"https://picsum.photos/300/200"} alt="..." />
                       </div>
                       <CardTitle
@@ -58,10 +63,10 @@ function ArticleCardContainer() {
                       </Button>
                     </CardBody>
                   </Card>
-                </div>
-              );
-            }
-          })}
+                );
+              }
+            })}
+          </div>
         </div>
       </div>
     </>

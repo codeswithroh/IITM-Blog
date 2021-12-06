@@ -9,15 +9,28 @@
 
   &__container {
     margin: 5em 2em;
-    @include flexBox(center, center, 5em, row);
-    flex-wrap: wrap;
+    @include flexBox(center, space-between, 10em, row);
+
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+    }
 
     &--right {
-      margin-left: auto;
+      @include flexBox(center, center, 10em, column);
     }
 
     &--left {
-      margin-right: auto;
+      @include flexBox(center, center, 10em, column);
+    }
+  }
+
+  &__image {
+    margin-bottom: 1em;
+
+    img {
+      @media screen and (max-width: 450px) {
+        max-width: 15em;
+      }
     }
   }
 
@@ -33,6 +46,12 @@
       inset 20px 20px 40px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     padding: $primary-padding;
+
+    @media screen and (max-width: 450px) {
+      padding: $mobile-primary-padding;
+      // margin-left: 2em;
+      // margin-right: 2em;
+    }
   }
 
   &__title {
@@ -42,6 +61,11 @@
   &__body {
     color: $primary-text-color;
     max-width: 18em;
+
+    @media screen and (max-width: 450px) {
+      max-width: 15em;
+      font-size: $sub-heading-mobile-font-size;
+    }
   }
 
   &__button {
@@ -54,5 +78,9 @@
       -4px -4px 8px 5px rgba(255, 255, 255, 0.25),
       inset 2px 2px 8px 5px rgba(0, 0, 0, 0.25),
       inset -2px -2px 8px 5px rgba(255, 255, 255, 0.25);
+
+    @media screen and (max-width: 450px) {
+      font-size: $sub-heading-mobile-font-size;
+    }
   }
 }
